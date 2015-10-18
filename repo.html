@@ -1,0 +1,13 @@
+﻿<div>
+    <h2>Open issues count: {{openIssues}}</h2>
+    <ol>
+        <li ng-repeat="contributor in contributors | orderBy:-'contributions'">
+            <div>
+                <h3>{{contributor.login}}</h3>
+                <img ng-src="{{contributor.avatar_url}}" title="{{contributor.login}}"/>
+                <h3>Contributions: {{contributor.contributions}}</h3>
+            </div>
+        </li>
+    </ol>
+    <a href="#/user/{{userName}}">Back to repos</a>
+</div>
